@@ -368,7 +368,27 @@ img{
     justify-content: center;
 }
 /*==================== SKILLS ====================*/
+.skills__info{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--mb-2-5);
+}
 
+.skills__info-title{
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}
+
+.skills__info-name{
+    font-size: var(--smaller-font-size);
+}
+
+.skills__info.title,
+.skills__info.name{
+    display: block;
+    text-align: center;
+}
 
 /*==================== QUALIFICATION ====================*/
 .qualification__tabs{
@@ -742,7 +762,8 @@ img{
     }
 
     .qualification__sections{
-        grid-template-columns: .5fr;
+        
+        -template-columns: .5fr;
     }
 
     .footer__container{
