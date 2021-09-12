@@ -15,7 +15,7 @@
 
         <title>Yazdan</title>
     </head>
-    <body>
+    <body onload="document.body.style.opacity='1'">
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
@@ -87,11 +87,9 @@
                             </svg>
                         </div>
                         <div class="home__data">
-                            <h1 class="home__title">
-                                Hello! 👋
-                                I'm Yazdan Zinati 
-                            </h1>
-                            <h3 class="home__subtitle">Software and Electrical Engineeer</h3>
+                            <h1 class="home__title">Hello! <span class="wave">👋</span><br/>
+                                I'm Yazdan</h1>
+                            <h3 class="home__subtitle">Software and Electrical Engineering Student</h3>
                             <p class="home__description">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nibh mi, imperdiet id leo at, efficitur interdum neque. Etiam faucibus facilisis quam sit amet pretium.
                             </p>
@@ -120,13 +118,7 @@
                     <img src="assets/img/code.jpg" alt="" class="about__img">
                     <div class="about__data">
                         <p class="about__description">
-                            Lorem ipsum dolor sit amet, cu mutat dignissim ius. Nam choro ancillae scriptorem ea. At mollis legimus sea, ut dolores sapientem abhorreant sed, per volutpat corrumpit in. Ea exerci nonumy instructior vim, prompta accumsan est in. 
                         </p>
-                    <div class="about__buttons">
-                        <a download="" href="assets/cv.pdf" class="button button--flex">
-                            Download CV <i class="uil uil-file-download-alt button__icon"></i>
-                        </a>
-                    </div>    
                     </div>
                 </div>
             </section>
@@ -134,23 +126,57 @@
             <!--==================== SKILLS ====================-->
             <section class="skills section" id="skills">
                 <h2 class="section__title">Skills</h2>
-                <span class="section__subtitle">Lorem ipsum</span>
+                <span class="section__subtitle">Working on growing this list...</span>
                 <div class="skills__container container grid">
                     <div class="skills__data">
                         <div class="skills__info">
                             <div>
-                                <span class="skills__info-title">tech</span>
-                                <span class="skills__info-name">git <br/>bash <br/> something else <br/> go</span>    
+                                <span class="skills__info-title">Languages</span>
+                                <span class="skills__info-name">
+                                    <br/>Programming:
+                                    <br/>Go 
+                                    <br/>Python 
+                                    <br/>Java 
+                                    <br/>C#
+                                    <br/>C
+                                    <br/>C++
+                                    <br/>Bash
+                                    <br/>PowerShell
+                                    <br/>
+                                    <br/>Human:
+                                    <br/>French
+                                    <br/>English
+                                    <br/>Persian
+                                </span>    
                             </div>
 
                             <div>
-                                <span class="skills__info-title">tech</span>
-                                <span class="skills__info-name">git <br/>bash <br/> something else <br/> go</span>    
+                                <span class="skills__info-title">Tools</span>
+                                <span class="skills__info-name">
+                                <br/>Docker
+                                <br/>K8s
+                                <br/>Linux
+                                <br/>Azure
+                                <br/>AWS
+                                <br/>VMware
+                                <br/>Git + Github
+                                <br/>
+                                <br/>Databases:
+                                <br/>MySQL
+                                <br/>SQLite
+                                <br/>MongoDB
+                                </span>
                             </div>
 
                             <div>
-                                <span class="skills__info-title">tech</span>
-                                <span class="skills__info-name">git <br/>bash <br/> something else <br/> go</span>    
+                                <span class="skills__info-title">Knowledge</span>
+                                <span class="skills__info-name">
+                                    <br/>Agile
+                                    <br/>Machine Learning
+                                    <br/>REST APIs
+                                    <br/>Functional programming
+                                    <br/>Software/Systems Modeling
+                                </span>    
                             </div>
                         </div>
                     </div>    
@@ -287,6 +313,12 @@
                                 </div>
                         </div>
                     </div>
+                    
+                    <div class="about__buttons">
+                        <a download="" href="assets/cv.pdf" class="button button--flex">
+                            View My Resume<i class="uil uil-file-download-alt button__icon"></i>
+                        </a>
+                    </div>        
                 </div>
             </section>
 

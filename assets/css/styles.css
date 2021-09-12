@@ -152,6 +152,14 @@ img{
     z-index: var(--z-fixed);
     background-color: var(--body-color);
 }
+
+/*==================== Fade on Load ====================*/
+body{ 
+    opacity: 0;
+    transition: opacity 2s;
+    -webkit-transition: opacity 2s; /* Safari */
+}
+
 /*==================== NAV ====================*/
 .nav{
     max-width: 968px;
@@ -326,6 +334,24 @@ img{
 .home__scroll-arrow{
     font-size: 1.25rem;
 }
+
+.wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+  }
 /*==================== BUTTONS ====================*/
 .button{
     display: inline-block;
@@ -364,10 +390,15 @@ img{
 }
 
 .about__buttons{
-    display: flex;
-    justify-content: center;
+    width: 50%;
+    margin: 0 auto;  
+    margin-top: 1.5rem;  
 }
 /*==================== SKILLS ====================*/
+.skills__container{
+    overflow-wrap: normal; 
+}
+
 .skills__info{
     display: flex;
     justify-content: space-evenly;
@@ -751,6 +782,8 @@ img{
     }
     .about__buttons{
         justify-content: initial;
+        justify-self: center;
+        justify-items: center;
     }
 
     .qualification__tabs{
@@ -763,7 +796,7 @@ img{
 
     .qualification__sections{
         
-        -template-columns: .5fr;
+        grid-template-columns: .5fr;
     }
 
     .footer__container{
