@@ -245,6 +245,11 @@ img{
 }
 
 /*==================== HOME ====================*/
+.home__section{
+    height: 100vh;
+    display: flex;
+}
+
 .home__container{
     gap: 1rem;
 }
