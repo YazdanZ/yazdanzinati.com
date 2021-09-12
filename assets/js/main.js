@@ -127,3 +127,9 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+function submitForm() {
+    var frm = document.getElementsByName('contact-form')[0];
+    frm.reset();  // Reset all form data
+    return false; // Prevent page refresh
+ }
