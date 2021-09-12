@@ -45,7 +45,7 @@
                         </li>
                         <li class="nav__item">
                             <a href="#contact" class="nav__link">
-                                <i class="uil uil-message nav__icon"></i> Contact Me
+                                <i class="uil uil-message nav__icon"></i> Contact
                             </a>
                         </li>
                     </ul>
@@ -90,7 +90,7 @@
                                     130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
                                     97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
                                     0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>                 
-                                    <image class="home__blob-image" x=12 y=30 href="assets/img/me.png"/>
+                                    <image class="home__blob-image" x=-70 y=-25 href="assets/img/me.png"/>
                                 </g>
                             </svg>
                         </div>
@@ -338,8 +338,8 @@
             <!--==================== CONTACT ME ====================-->
             <section class="contact section" id="contact">
                <h2 class="section__title">Contact Me</h2> 
-               <span>
-                   <br/>
+               <span class="section__subtitle">
+                   Got new ideas? Let's get in touch. 
                </span>
                 <div class="contact__container container grid">
                     <div>
@@ -347,35 +347,37 @@
                             <i class="uil uil-envelope-alt contact__icon"></i>
                             <div>
                                 <h3 class="contact__title">Email</h3>
-                                <span class="contact__subtitle">contact@yazdan.me</span>
+                                <a href="mailto:contact@yazdan.me" class="contact__subtitle">
+                                    contact@yazdan.me
+                                </a>
                             </div>
                         </div>
                     </div>    
 
-                    <form action="" class="contact__form grid">
+                    <form action="https://formspree.io/f/mnqlwqad" method = "post" class="contact__form grid">
                         <div class="contact__inputs grid">
                             <div class="contact__content">
                                 <label for="" class="contact__label">Name</label>
-                                <input type="text" class="contact__input">
+                                <input type="text" class="contact__input" required>
                             </div>
                             <div class="contact__content">
                                 <label for="" class="contact__label">Email</label>
-                                <input type="email" class="contact__input">
+                                <input type="email" name="_replyto" class="contact__input" required>
                             </div>
                         </div>
                         <div class="contact__content">
                             <label for="" class="contact__label">Title</label>
-                            <input type="text" class="contact__input">
+                            <input type="text" name="message" class="contact__input" required>
                         </div>
                         <div class="contact__content">
-                            <label for="" class="contact__label">Message</label>
-                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                            <label for="" name="message" class="contact__label">Message</label>
+                            <textarea name="message" id="" cols="0" rows="7" class="contact__input" required></textarea>
                         </div>
                         <div>
-                            <a href="#" class="button button--flex">
-                                Send Message
+                            <button type="submit" class="button button--flex">
+                                <p>Send Message</p>
                                 <i class="uil uil-message button__icon"></i>
-                            </a>
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -393,12 +395,7 @@
                     </div>
 
                     <ul class="footer__links">
-                        <li>
-                            <a href="#about" class="footer__link">About Me</a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="footer__link">Contact Me</a>
-                        </li>
+                       
                     </ul>
 
                     <div class="footer__socials">
