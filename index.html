@@ -18,42 +18,42 @@
     <body>
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
-            <header class="header" id="header">
-                <nav class="nav container">
-                    <a href="" class="nav__logo">Yazdan Zinati</a>
+            <nav class="nav container">
+                <a href="" class="nav__logo">Yazdan Zinati</a>
 
-                    <div class="nav__menu" id="nav-menu">
-                        <ul class="nav__list grid">
-                            <li class="nav__item">
-                                <a href="#home" class="nav__link">
-                                    <i class="uil uil-estate nav__icon"></i> Home
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#about" class="nav__link">
-                                    <i class="uil uil-user nav__icon"></i> About
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#skills" class="nav__link">
-                                    <i class="uil uil-arrow nav__icon"></i> Skills
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#contact" class="nav__link">
-                                    <i class="uil uil-message nav__icon"></i> Contact
-                                </a>
-                            </li>
-                        </ul>
-                        <i class="uil uil-multiply nav__close" id="nav-close"></i>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class="uil uil-estate nav__icon"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                <i class="uil uil-user nav__icon"></i> About
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class="uil uil-arrow nav__icon"></i> Skills
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">
+                                <i class="uil uil-message nav__icon"></i> Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <i class="uil uil-multiply nav__close" id="nav-close"></i>
+                </div>
+                <div class="nav__buttons">
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="uil uil-apps"></i>
                     </div>
-                    <div class="nav__buttons">
-                        <div class="nav__toggle" id="nav-toggle">
-                            <i class="uil uil-apps"></i>
-                        </div>
-                    </div>
+                </div>
+            </nav> 
                 </nav>
-            </header>
+            </nav> 
         </header>
 
         <!--==================== MAIN ====================-->
@@ -97,6 +97,7 @@
                     </div>
                     <div class="home__scroll">
                         <a href="#about" class="home__scroll-button button--flex">
+                            <i class="uil uil-angle-double-down home__scroll-arrow"></i>
                             <span class="home__scroll-name">Scroll down</span>
                             <i class="uil uil-angle-double-down home__scroll-arrow"></i>
                         </a>
@@ -125,56 +126,125 @@
             </section>
 
             <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills">
+            <!-- <section class="skills section" id="skills">
 
 
-            </section>
+            </section> -->
 
             <!--==================== QUALIFICATION ====================-->
-            <section class="qualification section">
+            <!-- <section class="qualification section">
 
 
-            </section>
+            </section> -->
 
             <!--==================== SERVICES ====================-->
-            <section class="services section" id="services">
+            <!-- <section class="services section" id="services">
                 
 
-            </section>
+            </section> -->
 
             <!--==================== PORTFOLIO ====================-->
-            <section class="portfolio section" id="portfolio">
+            <!-- <section class="portfolio section" id="portfolio">
                 
 
-            </section>
+            </section> -->
 
             <!--==================== PROJECT IN MIND ====================-->
-            <section class="project section">
+            <!-- <section class="project section">
 
 
-            </section>
+            </section> -->
 
             <!--==================== TESTIMONIAL ====================-->
-            <section class="testimonial section">
+            <!-- <section class="testimonial section">
                 
 
-            </section>
+            </section> -->
 
             <!--==================== CONTACT ME ====================-->
             <section class="contact section" id="contact">
+               <h2 class="section__title">Contact Moi</h2> 
+               <span>
+                   <br/>
+               </span>
+                <div class="contact__container container grid">
+                    <div>
+                        <div class="contact__information">
+                            <i class="uil uil-envelope-alt contact__icon"></i>
+                            <div>
+                                <h3 class="contact__title">Email</h3>
+                                <span class="contact__subtitle">contact@yazdan.me</span>
+                            </div>
+                        </div>
+                    </div>    
 
-
+                    <form action="" class="contact__form grid">
+                        <div class="contact__inputs grid">
+                            <div class="contact__content">
+                                <label for="" class="contact__label">Name</label>
+                                <input type="text" class="contact__input">
+                            </div>
+                            <div class="contact__content">
+                                <label for="" class="contact__label">Email</label>
+                                <input type="email" class="contact__input">
+                            </div>
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Title</label>
+                            <input type="text" class="contact__input">
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Message</label>
+                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                        </div>
+                        <div>
+                            <a href="#" class="button button--flex">
+                                Send Message
+                                <i class="uil uil-message button__icon"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
             </section>
         </main>
 
         <!--==================== FOOTER ====================-->
         <footer class="footer">
+            <div class="footer__bg">
+                <div class="footer__container container grid">
+                    <div>
+                        <h1 class="footer__title">
+                            Yazdan Zinati
+                        </h1>
+                        <span class="footer__subtitle">Engineeer</span>
+                    </div>
 
-            
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#about" class="footer__link">About Me</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="footer__link">Contact Me</a>
+                        </li>
+                    </ul>
+
+                    <div class="footer__socials">
+                        <a href="https://github.com/yazdanz" target="_blank", class="footer__social">
+                            <i class="uil uil-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="footer__social">
+                            <i class="uil uil-linkedin"></i>
+                        </a>
+                    </div>
+                </div>    
+                <p class="footer__copy">&#169; Yazdan Zinati. All right reserved</p>
+            </div>    
         </footer>
         
         <!--==================== SCROLL TOP ====================-->
-        
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="uil uil-angle-double-up scrollup__icon"></i>
+        </a>
 
         <!--==================== SWIPER JS ====================-->
         <script src=""></script>
