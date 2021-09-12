@@ -337,8 +337,8 @@ body{
 
 .wave {
     animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-    animation-duration: 2.5s;        /* Change to speed up or slow down */
-    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    animation-duration: 3s;        /* Change to speed up or slow down */
+    transform-origin: 110% 70%;       /* Pivot around the bottom-left palm */
     display: inline-block;
   }
   
@@ -846,6 +846,6 @@ body{
         width: 400px;
     }
     .home__social{
-        transform: translateX(-20rem);
+        transform: translateX(-22rem);
     }
 }
