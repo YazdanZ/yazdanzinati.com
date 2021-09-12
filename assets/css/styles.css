@@ -406,7 +406,7 @@ body{
 }
 
 .skills__info-title{
-    font-size: var(--h2-font-size);
+    font-size: var(--h3-font-size);
     font-weight: var(--font-semi-bold);
     color: var(--title-color);
 }
@@ -570,13 +570,10 @@ body{
 }
 
 .footer__title{
-    font-size: var(--h1-font-size);
+    font-size: var(--h2-font-size);
     margin-bottom: var(--mb-0-25);
 }
 
-.footer__subtitle{
-    font-size: var(--small-font-size);
-}
 
 .footer__links{
     display: flex;
@@ -605,7 +602,6 @@ body{
 }
 
 .footer__title,
-.footer__subtitle,
 .footer__link, 
 .footer__social{
     color: #FFF;
@@ -836,5 +832,20 @@ body{
     }
     .contact__inputs{
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1500px){
+    .header,
+    .main,
+    .footer__container{
+        padding: 0;
+    }
+
+    .home__blob{
+        width: 400px;
+    }
+    .home__social{
+        transform: translateX(-20rem);
     }
 }
