@@ -319,10 +319,11 @@ body{
 }
 
 .home__title{
-    font-size: var(--big-font-size);
+    font-size: var(--h3-font-size);
 }
 
 .home__title-name{
+    font-size: var(--big-font-size);
     color: var(--first-color);
 }
 
