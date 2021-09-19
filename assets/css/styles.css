@@ -175,6 +175,14 @@ img{
     background-color: var(--body-color);
 }
 
+/*==================== Fade on Load ====================*/
+body{
+    opacity: 0;
+    transition: opacity 2s;
+    -webkit-transition: opacity 2s; /* Safari */
+}
+    
+
 /*==================== NAV ====================*/
 .nav{
     max-width: 968px;
