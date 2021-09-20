@@ -345,7 +345,7 @@ body{
     -moz-background-clip: text;
     background-clip: text;
   
-    animation: shimmer infinite 4s linear;
+    animation: shimmer infinite 6s linear;
   }
   
   @keyframes shimmer {
@@ -401,9 +401,9 @@ body{
     animation-fill-mode: forwards;          /*  persist state  */
 }
 
-.wave:hover, .wave:active {
+.wave:hover {
     animation-play-state: running;
-    animation-iteration-count: 1;
+    animation-iteration-count: infinite;
 }
   
 @keyframes wave-animation {
