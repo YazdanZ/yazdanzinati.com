@@ -325,27 +325,39 @@ body{
 
 .home__title-name{
     font-size: var(--big-font-size);
-    color: var(--first-color);
+    color: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(
+      to right,
+      #5e81ac 0%,
+      #81a1c1 16%,
+      #88c0d0 32%,
+      #8fbcbb 48%,
+      #5e81ac 64%,
+      #81a1c1 80%,
+      #88c0d0 100%
+        );
+  
+    background-size: 300% 300%;
+    background-repeat: no-repeat;
+    background-position: top left;
     
-    /* Create the gradient. */
-    background-image: linear-gradient(
-    45deg,
-    #8fbcbb 20%, 
-    #88c0d0 40%, 
-    #81a1c1 60%, 
-    #5e81ac 80%);
-
-    /* Set the background size and repeat properties. */
-    background-size: 100%;
-    background-repeat: repeat;
-
-    /* Use the text as a mask for the background. */
-    /* This will show the gradient as a text color rather than element bg. */
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;     
-}
-
-.home__subtitle{
+    -moz-background-clip: text;
+    background-clip: text;
+  
+    animation: shimmer infinite 4s linear;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: top right;
+    }
+    100% {
+      background-position: top left;
+    }
+  }
+  
+    .home__subtitle{
     font-size: var(--h3-font-size);
     color: var(--text-color);
     font-weight: var(--font-medium);
