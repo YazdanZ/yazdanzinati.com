@@ -403,7 +403,7 @@ body{
 
 .wave:hover, .wave:active {
     animation-play-state: running;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
 }
   
 @keyframes wave-animation {
