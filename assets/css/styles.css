@@ -22,7 +22,8 @@
     --container-color: #FFF;
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
-
+    --selection-fg-color : #36363C;
+    --selection-bg-color : #FFDC00;
 
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
@@ -30,7 +31,7 @@
     /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
     --big-font-size: 2rem;
     --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
+    --h2-font-size: 1.45rem;
     --h3-font-size: 1.125rem;
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
@@ -62,7 +63,7 @@
     :root {
         --big-font-size: 3rem;
         --h1-font-size: 2.25rem;
-        --h2-font-size: 1.5rem;
+        --h2-font-size: 1.7rem;
         --h3-font-size: 1.25rem;
         --normal-font-size: 1rem;
         --small-font-size: .875rem;
@@ -70,6 +71,23 @@
     }
 }
 
+::-moz-selection {
+    color: var(--selection-fg-color);
+    background: var(--selection-bg-color);
+  }
+  
+::selection {
+    color: var(--selection-fg-color);
+    background: var(--selection-bg-color);
+  } 
+
+  img{
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
     /* HSL color mode */
@@ -287,11 +305,15 @@ body{
 
 .home__content{
     grid-template-columns: .5fr 3fr;
-    padding-top: 3.5rem;
+    padding-top: 10%;
+    padding-bottom: 30%;
     align-items: center;
 }
 
 .home__social{
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
     display: grid;
     grid-template-columns: max-content;
     row-gap: 1rem;
@@ -320,7 +342,9 @@ body{
 }
 
 .home__title{
+    color: var(--text-color);
     font-size: var(--h2-font-size);
+    font-weight: var(--font-medium);
 }
 
 .home__title-name{
@@ -357,7 +381,7 @@ body{
     }
   }
   
-    .home__subtitle{
+.home__subtitle{
     font-size: var(--h3-font-size);
     color: var(--text-color);
     font-weight: var(--font-medium);
@@ -368,31 +392,13 @@ body{
     margin-bottom: var(--mb-2);
 }
 
-.home__scroll{
-    display: none;
-}
-
-.home__scroll-button{
-    color: var(--first-color);
-    transition: .3s;
-}
-
-.home__scroll-button:hover{
-    transform: translateY(.25rem);
-}
-
-.home__scroll-name{
-    font-size: var(--small-font-size);
-    color: var(--title-color);
-    font-weight: var(--font-medium);
-    margin-right: var(--mb-0-25);
-}
-
-.home__scroll-arrow{
-    font-size: 1.25rem;
+.technologist__img {
+    height: 2rem;
 }
 
 .wave {
+    vertical-align: middle;
+    height: 2rem;
     animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
     animation-duration: 2.5s;        /* Change to speed up or slow down */
     transform-origin: 110% 70%;       /* Pivot around the bottom-left palm */
@@ -431,6 +437,13 @@ body{
 
 .button:hover{
     background-color: var(--first-color-alt);
+}
+
+.button__img{
+    font-size: 1.25rem;
+    margin-left: var(--mb-0-5);
+    transition: .3s;
+    height: 2rem;
 }
 
 .button__icon{
@@ -575,7 +588,7 @@ body{
 
 
 /*==================== CONTACT ME ====================*/
-.conatct__container{
+.contact__container{
     row-gap: 3rem;
 }
 
@@ -679,25 +692,23 @@ body{
     position: fixed;
     right: 1rem;
     bottom: -20%;
-    background-color: var(--first-color);
-    opacity: .8;
-    padding: 0 .3rem;
     border-radius: .4rem;
     z-index: var(--z-tooltip);
     transition: .4s;
 }
 
 .scrollup:hover{
+    transition-duration: 0.2s;
+    transform: translateY(-30%);
     color:  var(--first-color-alt);
 }
 
 .scrollup__icon{
-    font-size: 1.5rem;
-    color: #FFF;
+    height: 2rem;
 }
 /* Show scroll */
 .show-scroll{
-    bottom: 5rem;
+    bottom: 1rem;
 }
 
 /*========== SCROLL BAR ==========*/
