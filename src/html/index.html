@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      rel="icon"
+      type="image/png"
+      href="../../assets/images/technologist.png"
+      hreflang="en"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Yazdan Zinati's personal website" />
@@ -10,24 +20,59 @@
       content="Yazdan Zinati, Yazdan, Zinati, Personal Website"
     />
     <title>Yazdan Zinati's Homepage</title>
-    <style id="style-tag"></style>
   </head>
-  <body spellcheck="false">
+  <body onload="document.body.style.opacity='1'">
     <header>
-      <div id="header"></div>
+      <i class="uil uil-moon" id="theme-button"></i>
     </header>
     <main>
-      <section id="home__section">
-        <h2 class="home__title">Hi! my name is</h2>
-        <h1 class="home__title-name">Yazdan Zinati</h1>
+      <section class="home container">
+        <h1>
+          Greetings!
+          <img src="../../assets/images/wave.png" class="wave" />
+          <br />
+          I'm <span>Yazdan Zinati</span>
+        </h1>
+        <h2>
+          I’m a software engineering student at McGill University based in
+          Montréal where I work towards becoming a better developer and maybe
+          one day, a computational biologist.
+        </h2>
+        <p>
+          You can read more <a href="about.html">about me</a> and my
+          experiences.
+        </p>
+        <p>
+          If you fancy a chat, feel free to drop me a line at
+          <span>
+            <my-email data-user="hi" data-domain="yazdan.me"></my-email>
+          </span>
+        </p>
       </section>
-      <div id="css_box" class="split_left">
-        <code>
-          <pre contenteditable id="style-text"></pre>
-        </code>
-        <pre id="work-text"></pre>
-        <pre id="pgp-text"></pre>
-      </div>
     </main>
+    <footer class="container">
+      <ul>
+        <il>
+          <a
+            href="https://github.com/yazdanz"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="uil uil-github"></i>
+            <!-- GitHub -->
+          </a>
+        </il>
+        <il>
+          <a
+            href="https://www.linkedin.com/in/yazdan-zinati/"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="uil uil-linkedin"></i>
+            <!-- LinkedIn -->
+          </a>
+        </il>
+      </ul>
+    </footer>
   </body>
 </html>

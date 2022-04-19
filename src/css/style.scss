@@ -1,7 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Catamaran&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700;800;900&display=swap");
 :root {
+  /* Font family */
+  --def-font: "Rubik";
+
+  /* Font sizes */
+  --huge-font-size: 3rem;
+  --big-font-size: 1.96rem;
+  --normal-font-size: 1.5rem;
+
+  --icon-font-size: 1.3em;
+
+  --huge-font-weight: 900;
+  --big-font-weight: 800;
+
   /* define nord colors */
   --nord0: #2e3440;
   --nord1: #3b4252;
@@ -19,22 +31,203 @@
   --nord13: #ebcb8b;
   --nord14: #a3be8c;
   --nord15: #b48ead;
+
+  /* dark mode colors */
+  --def-bg-color: var(--nord0);
+  --def-fg-color: var(--nord6);
+  --def-sec-color: var(--nord8);
+  --def-ter-color: var(--nord7);
+
+  /* light mode colors */
+  --def-bg-color: white;
+  --def-fg-color: var(--nord3);
+  --def-sec-color: var(--nord10);
+  --def-ter-color: var(--nord9);
 }
 
-// #css_box {
-//   position: absolute;
-//   padding: 20px;
-//   top: 50%;
-//   -webkit-transform: translate(0%, -50%);
-//   transform: translate(0%, -50%);
-//   max-width: 49%;
-//   margin: 1vh 0.5vw;
-// }
-// #css_box {
-//   position: absolute;
-//   top: 50%;
-//   -webkit-transform: translate(0%, -50%);
-//   transform: translate(0%, -50%);
-//   max-width: 49%;
-//   margin: 1vh 0.5vw;
-// }
+/* Font size for large devices */
+@media screen and (min-width: 568px) {
+  :root {
+    --huge-font-size: 5rem;
+    --big-font-size: 2.8rem;
+    --normal-font-size: 2rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin-top: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--def-bg-color);
+  font-family: var(--def-font), sans-serif;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+main {
+  padding-top: em;
+}
+
+body.dark-theme {
+  --def-bg-color: var(--nord0);
+  --def-fg-color: var(--nord6);
+  --def-sec-color: var(--nord8);
+  --def-ter-color: var(--nord7);
+}
+
+i {
+  font-size: var(--icon-font-size);
+}
+
+h1,
+h2,
+p {
+  color: var(--def-fg-color);
+}
+
+.home h1 {
+  font-size: var(--huge-font-size);
+  font-weight: var(--huge-font-weight);
+}
+
+.home h2 {
+  font-size: var(--big-font-size);
+  font-weight: var(--big-font-weight);
+}
+
+.home p,
+ul {
+  font-size: var(--normal-font-size);
+  font-weight: var(--big-font-weight);
+}
+
+home ul,
+il {
+  white-space: nowrap;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.home span,
+a,
+i {
+  color: var(--def-sec-color);
+}
+
+i:hover,
+a:hover,
+a:active,
+a:focus {
+  color: var(--def-ter-color);
+}
+
+.social-icon {
+  text-decoration: none;
+}
+
+/* hide email through css */
+my-email::after {
+  content: attr(data-domain);
+}
+my-email::before {
+  content: attr(data-user) "\0040";
+}
+
+::-moz-selection {
+  color: var(--selection-fg-color);
+  background: var(--selection-bg-color);
+}
+
+::selection {
+  color: var(--def-bg-color);
+  background: var(--def-fg-color);
+}
+
+.wave {
+  /* vertical-align: middle; */
+  height: calc(0.85 * var(--huge-font-size));
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  transform-origin: 110% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+  animation-play-state: paused;
+}
+
+.wave:hover {
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+img {
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+
+footer {
+  padding-top: 10px;
+}
+
+#theme-button {
+  width: 100%;
+  font-size: 1.5em;
+  float: right;
+  text-align: end;
+  margin: 1rem 0.5rem;
+}
