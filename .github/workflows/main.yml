@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [redesign]
+  pull_request:
+    branches: [redesign]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.1.1
+
+      - run: npm ci
+      - run: npm run predeploy
+      - run: npm run deploy
