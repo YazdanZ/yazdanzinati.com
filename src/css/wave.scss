@@ -1,0 +1,43 @@
+#greeting-wave {
+  height: calc(0.85 * var(--huge-font-size));
+  display: inline-block;
+}
+
+.wave {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  transform-origin: 110% 70%; /* Pivot around the bottom-left palm */
+  animation-delay: 0.2s;
+}
+
+.wave:hover {
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}

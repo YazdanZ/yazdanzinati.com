@@ -21,30 +21,32 @@
     />
     <title>Yazdan Zinati's Homepage</title>
   </head>
-  <body onload="document.body.style.opacity='1'">
+  <body>
     <header>
       <i class="uil uil-moon" id="theme-button"></i>
     </header>
     <main>
       <section class="home container">
         <h1>
-          Greetings!
-          <img src="../../assets/images/wave.png" class="wave" />
+          <span id="greeting-text"></span>!
+          <img id="greeting-wave" src="../../assets/images/wave.png" />
           <br />
           I'm <span>Yazdan Zinati</span>
         </h1>
         <h2>
-          I’m a software engineering student at McGill University based in
-          Montréal where I work towards becoming a better developer and maybe
-          one day, a computational biologist.
+          I am an electrical and software engineering student at McGill
+          University in Montréal. I do everything software and relish the
+          experience of scrolling through clean code in vim while sipping coffee
+          more than most things in this world. Lately, I have been working on
+          using deep learning to solve problems in computational biology
+          research at the
+          <a href="http://www.ece.mcgill.ca/~aemad2/">COMBINE Lab</a>.
         </h2>
         <p>
-          You can read more <a href="about.html">about me</a> and my
-          experiences.
-        </p>
-        <p>
           If you fancy a chat, feel free to drop me a line at
-          <span>
+          <span
+            title="Sorry bout the non-copyable/clickable email. Didn't wanna get spammed by bots."
+          >
             <my-email data-user="hi" data-domain="yazdan.me"></my-email>
           </span>
         </p>
@@ -52,24 +54,40 @@
     </main>
     <footer class="container">
       <ul>
-        <il>
+        <il class="tooltip" data-tooltip="GitHub @yazdanz">
           <a
             href="https://github.com/yazdanz"
             target="_blank"
             class="social-icon"
           >
             <i class="uil uil-github"></i>
-            <!-- GitHub -->
           </a>
         </il>
-        <il>
+        <il class="tooltip" data-tooltip="LinkedIn @yazdan-zinati">
           <a
             href="https://www.linkedin.com/in/yazdan-zinati/"
             target="_blank"
             class="social-icon"
           >
             <i class="uil uil-linkedin"></i>
-            <!-- LinkedIn -->
+          </a>
+        </il>
+        <il class="tooltip" data-tooltip="PGP Key (for nerds)">
+          <a
+            href="https://github.com/YazdanZ/PGP-Pub-Key/raw/master/yazdan-gpg.pub"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="uil uil-key-skeleton-alt"></i>
+          </a>
+        </il>
+        <il class="tooltip" data-tooltip="View my résumé">
+          <a
+            href="https://github.com/YazdanZ/resume/raw/master/Resume%20-%20Yazdan%20Zinati.pdf"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="uil uil-file-alt"></i>
           </a>
         </il>
       </ul>

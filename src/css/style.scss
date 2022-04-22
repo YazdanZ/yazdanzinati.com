@@ -1,42 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700;800;900&display=swap");
+@import "tooltip";
+@import "wave";
+@import "nord";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap");
+
 :root {
   /* Font family */
-  --def-font: "Rubik";
+  --def-font: "Quicksand";
 
   /* Font sizes */
   --huge-font-size: 3rem;
-  --big-font-size: 1.96rem;
-  --normal-font-size: 1.5rem;
+  --big-font-size: 1.5rem;
+  --normal-font-size: 1.2rem;
 
   --icon-font-size: 1.3em;
 
-  --huge-font-weight: 900;
-  --big-font-weight: 800;
-
-  /* define nord colors */
-  --nord0: #2e3440;
-  --nord1: #3b4252;
-  --nord2: #434c5e;
-  --nord3: #4c566a;
-  --nord4: #d8dee9;
-  --nord5: #e5e9f0;
-  --nord6: #eceff4;
-  --nord7: #8fbcbb;
-  --nord8: #88c0d0;
-  --nord9: #81a1c1;
-  --nord10: #5e81ac;
-  --nord11: #bf616a;
-  --nord12: #d08770;
-  --nord13: #ebcb8b;
-  --nord14: #a3be8c;
-  --nord15: #b48ead;
-
-  /* dark mode colors */
-  --def-bg-color: var(--nord0);
-  --def-fg-color: var(--nord6);
-  --def-sec-color: var(--nord8);
-  --def-ter-color: var(--nord7);
+  --huge-font-weight: 700;
+  --big-font-weight: 500;
 
   /* light mode colors */
   --def-bg-color: white;
@@ -49,7 +28,7 @@
 @media screen and (min-width: 568px) {
   :root {
     --huge-font-size: 5rem;
-    --big-font-size: 2.8rem;
+    --big-font-size: 2.5rem;
     --normal-font-size: 2rem;
   }
 }
@@ -60,19 +39,18 @@
   margin-top: 0;
 }
 
-html {
-  scroll-behavior: smooth;
+html,
+body {
+  height: 100%;
 }
 
 body {
   background-color: var(--def-bg-color);
   font-family: var(--def-font), sans-serif;
-  opacity: 0;
   transition: all 0.3s;
-}
-
-main {
-  padding-top: em;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--def-fg-color);
 }
 
 body.dark-theme {
@@ -82,33 +60,47 @@ body.dark-theme {
   --def-ter-color: var(--nord7);
 }
 
+header {
+  width: 100%;
+  display: block;
+  height: 30px;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+
+main {
+  height: 75%;
+  margin: auto;
+  display: table;
+}
+
+.home.container {
+  display: table-cell;
+  vertical-align: middle;
+  border: 1.5rem solid transparent;
+}
+
 i {
   font-size: var(--icon-font-size);
 }
 
-h1,
-h2,
-p {
-  color: var(--def-fg-color);
-}
-
-.home h1 {
+h1 {
   font-size: var(--huge-font-size);
   font-weight: var(--huge-font-weight);
 }
 
-.home h2 {
+h2 {
   font-size: var(--big-font-size);
   font-weight: var(--big-font-weight);
 }
 
-.home p,
+p,
 ul {
   font-size: var(--normal-font-size);
   font-weight: var(--big-font-weight);
 }
 
-home ul,
+ul,
 il {
   white-space: nowrap;
   margin-right: 20px;
@@ -119,6 +111,14 @@ il {
 a,
 i {
   color: var(--def-sec-color);
+}
+
+#greeting-text {
+  color: var(--def-fg-color);
+}
+
+a {
+  white-space: nowrap;
 }
 
 i:hover,
@@ -150,48 +150,6 @@ my-email::before {
   background: var(--def-fg-color);
 }
 
-.wave {
-  /* vertical-align: middle; */
-  height: calc(0.85 * var(--huge-font-size));
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s; /* Change to speed up or slow down */
-  transform-origin: 110% 70%; /* Pivot around the bottom-left palm */
-  display: inline-block;
-  animation-play-state: paused;
-}
-
-.wave:hover {
-  animation-play-state: running;
-  animation-iteration-count: infinite;
-}
-
-@keyframes wave-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
-  20% {
-    transform: rotate(-8deg);
-  }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(0deg);
-  } /* Reset for the last half to pause */
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
 img {
   -khtml-user-select: none;
   -o-user-select: none;
@@ -210,6 +168,11 @@ img {
   .container {
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .home.container {
+    border: 0rem solid transparent;
   }
 }
 
@@ -218,16 +181,12 @@ img {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
-}
-
-footer {
-  padding-top: 10px;
+  .home.container {
+    border: 0.5rem solid transparent;
+  }
 }
 
 #theme-button {
-  width: 100%;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   float: right;
-  text-align: end;
-  margin: 1rem 0.5rem;
 }
