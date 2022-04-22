@@ -4,7 +4,7 @@
   "description": "Yazdan Zinati's personal website",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/.bin/webpack",
+    "build": "./node_modules/.bin/webpack && cp CNAME dist/CNAME",
     "build-watch": "./node_modules/.bin/webpack --watch",
     "serve": "./node_modules/.bin/webpack serve",
     "predeploy": "npm run build",
