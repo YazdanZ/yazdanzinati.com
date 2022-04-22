@@ -18,6 +18,13 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3.1.1
 
-      - run: npm ci
-      - run: npm run predeploy
-      - run: npm run deploy
+      - name: npm predeploy
+        run: |
+          npm ci 
+          npm run predeploy
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.3.0
+        with:
+          branch: gh-pages
+          folder: dist
