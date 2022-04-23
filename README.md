@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![CI](https://github.com/YazdanZ/yazdanzinati.com/actions/workflows/main.yml/badge.svg?branch=master&event=page_build)](https://github.com/YazdanZ/yazdanzinati.com/actions/workflows/main.yml)
+[![CI](https://github.com/YazdanZ/yazdanzinati.com/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/YazdanZ/yazdanzinati.com/actions/workflows/main.yml)
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://yazdanzinati.com/)
 
 </div>
