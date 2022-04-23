@@ -12,13 +12,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YazdanZ/personal-website.git"
+    "url": "git+https://github.com/YazdanZ/yazdanzinati.com.git"
   },
   "author": "Yazdan Zinati",
   "bugs": {
-    "url": "https://github.com/YazdanZ/personal-website/issues"
+    "url": "https://github.com/YazdanZ/yazdanzinati.com/issues"
   },
-  "homepage": "https://github.com/YazdanZ/personal-website#readme",
+  "homepage": "https://github.com/YazdanZ/yazdanzinati.com#readme",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.17.9",
