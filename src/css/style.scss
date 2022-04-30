@@ -2,7 +2,7 @@
 @import "wave";
 @import "hideemail";
 @import "coreconf";
-
+@import "themeswitcher";
 * {
   box-sizing: border-box;
   padding: 0;
@@ -148,21 +148,6 @@ img {
     --big-font-size: 2.5rem;
     --normal-font-size: 2rem;
   }
-}
-
-/* Theme switching */
-/******************/
-#theme-button {
-  font-size: 1.5rem;
-  float: right;
-  margin-top: 0.5rem;
-}
-
-body.dark-theme {
-  --def-bg-color: var(--nord0);
-  --def-fg-color: var(--nord6);
-  --def-sec-color: var(--nord8);
-  --def-ter-color: var(--nord7);
 }
 
 #greeting-text {
