@@ -15,7 +15,6 @@ function greet(firstVisit) {
     "Hey",
     "Heyyy",
     "Ahoy",
-    "Ciao",
     "G’day",
     "Heya",
   ];

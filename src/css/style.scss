@@ -40,6 +40,12 @@ footer {
   padding-bottom: 1rem;
 }
 
+footer p {
+  margin: 0;
+  text-align: center;
+  font-size: var(--small-font-size);
+}
+
 .container {
   max-width: 1200px;
   margin-left: 1.5rem;
@@ -70,6 +76,10 @@ p,
 ul {
   font-size: var(--normal-font-size);
   font-weight: var(--big-font-weight);
+}
+
+.smallf {
+  font-size: var(--small-font-size);
 }
 
 il {
@@ -145,8 +155,9 @@ img {
 @media screen and (min-width: 568px) {
   :root {
     --huge-font-size: 5rem;
-    --big-font-size: 2.5rem;
-    --normal-font-size: 2rem;
+    --big-font-size: 2.37rem;
+    --normal-font-size: 1.89rem;
+    --small-font-size: 0.9rem;
   }
 }
 
