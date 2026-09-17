@@ -70,6 +70,7 @@ h1 {
 h2 {
   font-size: var(--big-font-size);
   font-weight: var(--big-font-weight);
+  text-align: justify;
 }
 
 p,
@@ -154,9 +155,9 @@ img {
 /* Font size for large devices */
 @media screen and (min-width: 568px) {
   :root {
-    --huge-font-size: 5rem;
-    --big-font-size: 2.37rem;
-    --normal-font-size: 1.89rem;
+    --huge-font-size: 4rem;
+  --big-font-size: 1.8rem;
+  --normal-font-size: 1.89rem;
     --small-font-size: 0.9rem;
   }
 }

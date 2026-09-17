@@ -20,11 +20,7 @@ function greet(firstVisit) {
   ];
 
   let greeting;
-  if (firstVisit) {
-    greeting = greetings[Math.floor(Math.random() * greetings.length)];
-  } else {
-    greeting = "Hey, you again";
-  }
+  greeting = greetings[Math.floor(Math.random() * greetings.length)];
   greetingText.innerHTML = greeting;
 }
 
