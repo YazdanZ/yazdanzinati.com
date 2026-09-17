@@ -70,7 +70,6 @@ h1 {
 h2 {
   font-size: var(--big-font-size);
   font-weight: var(--big-font-weight);
-  text-align: justify;
 }
 
 p,
@@ -95,7 +94,7 @@ a {
 }
 
 a {
-  white-space: nowrap;
+  white-space: normal;
 }
 
 i:hover,
@@ -131,6 +130,9 @@ img {
 /* Media queries */
 /****************/
 @media screen and (min-width: 768px) {
+  h2 {
+    text-align: justify;
+  }
   .container {
     margin-left: auto;
     margin-right: auto;
